@@ -16,22 +16,22 @@ public class ImpUsers implements IUsersService{
     
     @Override
     public void createUsers(Users user) {
-     
+     iuserRepository.save(user);
     }
 
     @Override
     public List<Users> getAllUsers() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+     return iuserRepository.findAll();
     }
 
     @Override
-    public Users findUser(Long id) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    public Users findUser(Long id){
+    return iuserRepository.findById(id).orElse(null);
     }
 
     @Override
     public void deleteUser(Long id) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    iuserRepository.deleteById(id);
     }
     
 }
