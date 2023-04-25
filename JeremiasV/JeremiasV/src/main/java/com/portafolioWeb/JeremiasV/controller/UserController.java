@@ -22,14 +22,16 @@ public class UserController {
     private ImpUsers impUserService;
     
     @PostMapping("/create/user")
-    public void createUser(@RequestBody Users user){
-        impUserService.createUsers(user);
+    public String createUser(@RequestBody Users user){
+            impUserService.createUsers(user);
+            return "La persona con el id: " + user.getId() + " fue creada correctamente";
     }
     
     @GetMapping("/users/all")
     @ResponseBody
       public List<Users> allUsers(){
-          return impUserService.getAllUsers();
+         return impUserService.getAllUsers();
+          
     }
     
     @GetMapping("/user")
@@ -37,8 +39,9 @@ public class UserController {
         return impUserService.findUser(id);
     }
   
-    @DeleteMapping("delete/user/{id")
-    public void deleteuser(@PathVariable Long id){
+    @DeleteMapping("delete/user/{id}")
+    public String deleteuser(@PathVariable Long id){
         impUserService.deleteUser(id);
+        return "El usuario con el id: " + id + " se ha eliminado correctamente";
     }
 }

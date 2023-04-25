@@ -25,4 +25,13 @@ public class Users {
     private String apellido;
     
     private String img;
+
+    public Users(Long id, String nombre, String apellido, String img) {
+        this.id = id;
+        this.nombre = nombre;
+        this.apellido = apellido;
+        this.img = img;
+    }
+    
+    
 }
