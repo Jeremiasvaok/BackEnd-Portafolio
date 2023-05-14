@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -34,6 +35,20 @@ public class UserController {
       public List<Users> allUsers(){
          return impUserService.getAllUsers();
           
+    }
+    @PutMapping("/edit/user/{id}")
+    public String editUser(@PathVariable Long id,
+                           @RequestParam("nombre") String newNombre,
+                           @RequestParam("apellido") String newApellido,
+                           @RequestParam("img") String newImg){
+    Users user = impUserService.findUser(id);
+     user.setNombre(newNombre);
+     user.setApellido(newApellido);
+     user.setImg(newImg);
+     impUserService.createUsers(user);
+     
+     return "La usuario con el id " + user.getId() + " fue autualizado con exito " + user;
+        
     }
     
     @GetMapping("/user")
