@@ -22,4 +22,29 @@ public class Role {
     @NotNull
     @Enumerated(EnumType.STRING)
    private RolName rolName;
+
+    public Role(RolName rolName) {
+        this.rolName = rolName;
+    }
+
+    public Role() {
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public RolName getRolName() {
+        return rolName;
+    }
+
+    public void setRolName(RolName rolName) {
+        this.rolName = rolName;
+    }
+    
+   
 }
