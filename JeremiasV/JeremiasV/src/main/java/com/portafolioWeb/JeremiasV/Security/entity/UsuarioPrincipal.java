@@ -23,7 +23,7 @@ public class UsuarioPrincipal implements UserDetails{
         this.password = password;
         this.authorities = authorities;
     }
-    public static UsuarioPrincipal boild(User user){
+    public static UsuarioPrincipal build(User user){
     List<GrantedAuthority> authorities =
                 user.getRoles().stream().map(rol -> new SimpleGrantedAuthority(rol.getRolName().name())).collect(Collectors.toList());
         return new UsuarioPrincipal(user.getName(), user.getNameUser(), user.getEmail(), user.getPassword(), authorities);
