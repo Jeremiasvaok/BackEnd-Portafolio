@@ -45,6 +45,10 @@ public class Role {
     public void setRolName(RolName rolName) {
         this.rolName = rolName;
     }
+
+    Object getRoleName() {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
     
    
 }

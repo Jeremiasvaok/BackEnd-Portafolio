@@ -7,6 +7,7 @@ package com.portafolioWeb.JeremiasV.Securiry.Repository;
 import com.portafolioWeb.JeremiasV.Security.entity.Role;
 import com.portafolioWeb.JeremiasV.Security.enums.RolName;
 import java.util.Optional;
+import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 @Repository
