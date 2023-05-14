@@ -47,7 +47,7 @@ public class UserController {
      user.setImg(newImg);
      impUserService.createUsers(user);
      
-     return "La usuario con el id " + user.getId() + " fue autualizado con exito " + user;
+     return "La usuario con el id " + id + " fue autualizado con exito " + user;
         
     }
     
