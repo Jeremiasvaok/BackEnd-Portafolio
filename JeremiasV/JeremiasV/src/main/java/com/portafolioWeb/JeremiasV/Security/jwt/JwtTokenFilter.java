@@ -1,4 +1,7 @@
-
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
 package com.portafolioWeb.JeremiasV.Security.jwt;
 
 import com.portafolioWeb.JeremiasV.Security.Sevirce.UserDetailsI;
@@ -32,7 +35,7 @@ public class JwtTokenFilter extemds OncePerRequestFilter{
                 UsernamePasswordAuthenticationToken auth = new UsernamePasswordAuthenticationToken(userDetails, null, userDetails.getAuthorities());
                 SecurityContextHolder.getContext().setAuthentication(auth);
             }
-        } catch (Exception e) {
+        }catch (Exception e) {
             logger.error("Fallo el metodo doFilterInternal");
         }
            filterChain.doFilter(request, response);

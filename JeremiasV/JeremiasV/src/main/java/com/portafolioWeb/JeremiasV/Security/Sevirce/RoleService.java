@@ -4,7 +4,7 @@
  */
 package com.portafolioWeb.JeremiasV.Security.Sevirce;
 
-import com.portafolioWeb.JeremiasV.Securiry.Repository.IRoleRepository;
+import com.portafolioWeb.JeremiasV.Security.Repository.IRoleRepository;
 import com.portafolioWeb.JeremiasV.Security.entity.Role;
 import com.portafolioWeb.JeremiasV.Security.enums.RolName;
 import jakarta.transaction.Transactional;

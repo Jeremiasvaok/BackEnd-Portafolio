@@ -1,7 +1,7 @@
 package com.portafolioWeb.JeremiasV.Security.Sevirce;
 
 import com.portafolioWeb.JeremiasV.Security.entity.User;
-import com.portafolioWeb.JeremiasV.Securiry.Repository.IUserRepository;
+import com.portafolioWeb.JeremiasV.Security.Repository.IUserRepository;
 import jakarta.transaction.Transactional;
 import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;

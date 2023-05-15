@@ -1,5 +1,5 @@
 
-package com.portafolioWeb.JeremiasV.Securiry.Repository;
+package com.portafolioWeb.JeremiasV.Security.Repository;
 
 import com.portafolioWeb.JeremiasV.Security.entity.User;
 import com.portafolioWeb.JeremiasV.model.Users;

@@ -2,7 +2,7 @@
 package com.portafolioWeb.JeremiasV.service;
 
 import com.portafolioWeb.JeremiasV.model.Users;
-import com.portafolioWeb.JeremiasV.Securiry.Repository.IUserRepository;
+import com.portafolioWeb.JeremiasV.Security.Repository.IUserRepository;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
